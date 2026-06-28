@@ -241,6 +241,27 @@
       border-color: #f7c948;
       transform: translateY(-4px);
     }
+    .btn-whatsapp {
+      background: #25D366;
+      color: #fff;
+      padding: 14px 40px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      transition: 0.3s;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 8px 30px rgba(37, 211, 102, 0.25);
+    }
+    .btn-whatsapp:hover {
+      background: #1da851;
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 14px 40px rgba(37, 211, 102, 0.4);
+    }
 
     .quick-nav {
       display: flex;
@@ -358,6 +379,14 @@
       background: #f7c948;
       color: #0b0e14;
       transform: scale(1.05);
+    }
+    .card .old-price {
+      font-size: 0.85rem;
+      color: #5a647a;
+      margin-top: -4px;
+    }
+    .card .old-price strike {
+      color: #5a647a;
     }
 
     .prestige-card {
@@ -632,14 +661,14 @@
       transform: scale(1.04);
       box-shadow: 0 12px 40px rgba(88, 101, 242, 0.3);
     }
-    .discord-links-row {
+    .contact-row {
       display: flex;
       justify-content: center;
       gap: 20px;
       flex-wrap: wrap;
       margin-top: 16px;
     }
-    .discord-links-row a {
+    .contact-row a {
       color: #aab3c9;
       text-decoration: none;
       font-weight: 600;
@@ -647,11 +676,17 @@
       border-radius: 30px;
       border: 1px solid rgba(255, 255, 255, 0.06);
       transition: 0.25s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
-    .discord-links-row a:hover {
+    .contact-row a:hover {
       color: #f7c948;
       border-color: rgba(247, 201, 72, 0.2);
       background: rgba(247, 201, 72, 0.04);
+    }
+    .contact-row a i.fa-whatsapp {
+      color: #25D366;
     }
 
     .fade-up {
@@ -702,7 +737,7 @@
     }
     @media (max-width: 480px) {
       .hero h1 { font-size: 2.2rem; }
-      .btn-primary, .btn-secondary { padding: 12px 28px; font-size: 0.95rem; }
+      .btn-primary, .btn-secondary, .btn-whatsapp { padding: 12px 28px; font-size: 0.95rem; }
       .discord-cta .btn-discord { padding: 12px 28px; font-size: 0.95rem; }
       .fee-grid { grid-template-columns: 1fr; }
     }
@@ -742,6 +777,9 @@
       <a href="https://discord.gg/GpfkZZju7n" target="_blank" rel="noopener noreferrer" class="btn-secondary">
         <i class="fab fa-discord"></i> Join Discord
       </a>
+      <a href="https://wa.me/6588223457" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
     </div>
     <div class="quick-nav">
       <a href="#prestige" class="qn-btn"><i class="fas fa-crown"></i> Prestige</a>
@@ -761,7 +799,8 @@
           <span class="badge">POPULAR</span>
           <span class="icon">⭐</span>
           <h3>Prestige 1</h3>
-          <div class="price">$10</div>
+          <div class="price">$7</div>
+          <div class="old-price"><strike>Was $10</strike></div>
           <div class="sub">Quick & reliable</div>
           <a href="https://discord.gg/h5vKuTFM3w" target="_blank" rel="noopener noreferrer" class="btn-card">Order Now</a>
         </div>
@@ -769,7 +808,8 @@
           <span class="badge">BEST VALUE</span>
           <span class="icon">🌟</span>
           <h3>Prestige 2</h3>
-          <div class="price">$15</div>
+          <div class="price">$10</div>
+          <div class="old-price"><strike>Was $15</strike></div>
           <div class="sub">Great balance</div>
           <a href="https://discord.gg/h5vKuTFM3w" target="_blank" rel="noopener noreferrer" class="btn-card">Order Now</a>
         </div>
@@ -799,23 +839,27 @@
       <h2 class="section-title fade-up">📈 Rank Progression</h2>
       <p class="section-sub fade-up">Climb from Bronze to Masters — transparent pricing</p>
       <div class="rank-grid">
-        <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🥉</span> Bronze 1 → 2</span><span class="rank-price">$1.00</span></div>
-        <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🥉</span> Bronze 2 → 3</span><span class="rank-price">$1.50</span></div>
-        <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🥉</span> Bronze 3 → Silver 1</span><span class="rank-price">$2.00</span></div>
-        <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🥈</span> Silver 1 → 2</span><span class="rank-price">$2.00</span></div>
-        <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🥈</span> Silver 2 → 3</span><span class="rank-price">$2.00</span></div>
-        <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🥈</span> Silver 3 → Gold 1</span><span class="rank-price">$2.00</span></div>
-        <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🥇</span> Gold 1 → 2</span><span class="rank-price">$2.00</span></div>
-        <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🥇</span> Gold 2 → 3</span><span class="rank-price">$2.00</span></div>
-        <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🥇</span> Gold 3 → Diamond 1</span><span class="rank-price">$3.00</span></div>
-        <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">💎</span> Diamond 1 → 2</span><span class="rank-price">$3.00</span></div>
-        <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">💎</span> Diamond 2 → 3</span><span class="rank-price">$3.00</span></div>
-        <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">💎</span> Diamond 3 → Mythic 1</span><span class="rank-price">$4.00</span></div>
-        <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🔮</span> Mythic 1 → 2</span><span class="rank-price">$4.00</span></div>
-        <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🔮</span> Mythic 2 → 3</span><span class="rank-price">$4.00</span></div>
-        <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🔮</span> Mythic 3 → Legendary 1</span><span class="rank-price">$10.00</span></div>
-        <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">⚡</span> Legendary 1 → 2</span><span class="rank-price">$12.00</span></div>
-        <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">⚡</span> Legendary 2 → 3</span><span class="rank-price">$14.00</span></div>
+        <!-- All prices under Mythic 3 → Legendary 1 are cut in half -->
+        <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🥉</span> Bronze 1 → 2</span><span class="rank-price">$0.50</span></div>
+        <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🥉</span> Bronze 2 → 3</span><span class="rank-price">$0.75</span></div>
+        <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🥉</span> Bronze 3 → Silver 1</span><span class="rank-price">$1.00</span></div>
+        <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🥈</span> Silver 1 → 2</span><span class="rank-price">$1.00</span></div>
+        <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🥈</span> Silver 2 → 3</span><span class="rank-price">$1.00</span></div>
+        <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🥈</span> Silver 3 → Gold 1</span><span class="rank-price">$1.00</span></div>
+        <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🥇</span> Gold 1 → 2</span><span class="rank-price">$1.00</span></div>
+        <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🥇</span> Gold 2 → 3</span><span class="rank-price">$1.00</span></div>
+        <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🥇</span> Gold 3 → Diamond 1</span><span class="rank-price">$1.50</span></div>
+        <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">💎</span> Diamond 1 → 2</span><span class="rank-price">$1.50</span></div>
+        <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">💎</span> Diamond 2 → 3</span><span class="rank-price">$1.50</span></div>
+        <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">💎</span> Diamond 3 → Mythic 1</span><span class="rank-price">$2.00</span></div>
+        <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🔮</span> Mythic 1 → 2</span><span class="rank-price">$2.00</span></div>
+        <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🔮</span> Mythic 2 → 3</span><span class="rank-price">$2.00</span></div>
+        <!-- Explicitly set Mythic 3 → Legendary 1 to $6 -->
+        <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🔮</span> Mythic 3 → Legendary 1</span><span class="rank-price">$6.00</span></div>
+        <!-- Legendary 1-2 and 2-3 updated -->
+        <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">⚡</span> Legendary 1 → 2</span><span class="rank-price">$8.00</span></div>
+        <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">⚡</span> Legendary 2 → 3</span><span class="rank-price">$11.00</span></div>
+        <!-- Negotiable stays same -->
         <div class="rank-item fade-up" style="border-color: rgba(247,201,72,0.2);">
           <span class="rank-name"><span class="rank-icon">🏅</span> Legendary 3 → Masters 1+</span>
           <span class="rank-price negotiable">Negotiable <a href="https://discord.gg/h5vKuTFM3w" target="_blank" rel="noopener noreferrer">📩</a></span>
@@ -830,11 +874,12 @@
       <h2 class="section-title fade-up">🔥 Winstreak Boosts</h2>
       <p class="section-sub fade-up">Dominate the leaderboard with consecutive wins</p>
       <div class="ws-grid">
-        <div class="ws-item fade-up"><div class="ws-number">5</div><div class="ws-label">Win Streak</div><div class="ws-price">$2</div></div>
-        <div class="ws-item fade-up"><div class="ws-number">10</div><div class="ws-label">Win Streak</div><div class="ws-price">$5</div></div>
+        <div class="ws-item fade-up"><div class="ws-number">1</div><div class="ws-label">Win Streak</div><div class="ws-price">$0.50</div></div>
+        <div class="ws-item fade-up"><div class="ws-number">5</div><div class="ws-label">Win Streak</div><div class="ws-price">$1.50</div></div>
+        <div class="ws-item fade-up"><div class="ws-number">10</div><div class="ws-label">Win Streak</div><div class="ws-price">$4</div></div>
         <div class="ws-item fade-up"><div class="ws-number">25</div><div class="ws-label">Win Streak</div><div class="ws-price">$10</div></div>
-        <div class="ws-item fade-up"><div class="ws-number">50</div><div class="ws-label">Win Streak</div><div class="ws-price">$35</div></div>
-        <div class="ws-item fade-up"><div class="ws-number">100</div><div class="ws-label">Win Streak</div><div class="ws-price">$75</div></div>
+        <div class="ws-item fade-up"><div class="ws-number">50</div><div class="ws-label">Win Streak</div><div class="ws-price">$25</div></div>
+        <div class="ws-item fade-up"><div class="ws-number">100</div><div class="ws-label">Win Streak</div><div class="ws-price">$70</div></div>
       </div>
       <div style="text-align:center;margin-top:28px;">
         <a href="https://discord.gg/h5vKuTFM3w" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="border-color:rgba(247,201,72,0.2);">
@@ -877,7 +922,7 @@
           <h3><i class="fas fa-crown"></i> VIP Gamepass Subscription</h3>
           <div>
             <span class="price-tag">
-              <strike>$20</strike> $15
+              <strike>$20</strike> $8
             </span>
             <span class="worth-tag">Worth $40</span>
             <span style="color: #aab3c9; font-size: 0.9rem; margin-left: 8px;">/ month</span>
@@ -902,7 +947,7 @@
     </div>
   </section>
 
-  <!-- ─── DISCORD CTA ─── -->
+  <!-- ─── DISCORD & CONTACT CTA ─── -->
   <section id="discord">
     <div class="container">
       <div class="discord-cta fade-up">
@@ -911,9 +956,10 @@
         <a href="https://discord.gg/GpfkZZju7n" target="_blank" rel="noopener noreferrer" class="btn-discord">
           <i class="fab fa-discord"></i> Join Discord
         </a>
-        <div class="discord-links-row">
+        <div class="contact-row">
           <a href="https://discord.gg/GpfkZZju7n" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i> Main Server</a>
           <a href="https://discord.gg/h5vKuTFM3w" target="_blank" rel="noopener noreferrer"><i class="fas fa-shopping-cart"></i> Purchase Channel</a>
+          <a href="https://wa.me/6588223457" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> +65 88223457</a>
         </div>
       </div>
     </div>
@@ -924,6 +970,7 @@
       <p>© 2026 <strong>BrawlBoost</strong> — Not affiliated with Supercell. All boosts are hand-played.</p>
       <p style="margin-top:6px;">
         <a href="https://discord.gg/GpfkZZju7n" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i> Discord</a> &nbsp;·&nbsp;
+        <a href="https://wa.me/6588223457" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a> &nbsp;·&nbsp;
         <a href="#prestige">Prestige</a> &nbsp;·&nbsp;
         <a href="#ranks">Ranks</a> &nbsp;·&nbsp;
         <a href="#winstreak">Winstreak</a> &nbsp;·&nbsp;
