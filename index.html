@@ -4,10 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Brawl Stars Boosting</title>
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <style>
-    /* ── Reset & Base ── */
     * {
       margin: 0;
       padding: 0;
@@ -23,7 +21,6 @@
       overflow-x: hidden;
     }
 
-    /* ── LOADER ── */
     #loader-wrapper {
       position: fixed;
       top: 0;
@@ -63,12 +60,10 @@
       100% { transform: rotate(360deg) scale(1); }
     }
 
-    /* ── Scrollbar ── */
     ::-webkit-scrollbar { width: 8px; }
     ::-webkit-scrollbar-track { background: #1a1f2b; }
     ::-webkit-scrollbar-thumb { background: #f7c948; border-radius: 10px; }
 
-    /* ── Utilities ── */
     .container {
       max-width: 1300px;
       margin: 0 auto;
@@ -93,7 +88,6 @@
       margin-bottom: 40px;
     }
 
-    /* ── Animated BG ── */
     .bg-glow {
       position: fixed;
       top: -40%;
@@ -110,7 +104,6 @@
       100% { transform: translate(60px, 40px) scale(1.2); }
     }
 
-    /* ── Header / Nav ── */
     header {
       position: sticky;
       top: 0;
@@ -178,7 +171,6 @@
       color: #fff !important;
     }
 
-    /* ── Hero ── */
     .hero {
       position: relative;
       z-index: 1;
@@ -250,7 +242,6 @@
       transform: translateY(-4px);
     }
 
-    /* ── 4 Big Category Buttons ── */
     .quick-nav {
       display: flex;
       justify-content: center;
@@ -288,14 +279,12 @@
       box-shadow: 0 12px 40px rgba(247, 201, 72, 0.15);
     }
 
-    /* ── Sections ── */
     section {
       position: relative;
       z-index: 1;
       padding: 70px 0 50px;
     }
 
-    /* ── Card Grid ── */
     .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -371,7 +360,6 @@
       transform: scale(1.05);
     }
 
-    /* ── Prestige special ── */
     .prestige-card {
       background: linear-gradient(145deg, rgba(247, 201, 72, 0.08), rgba(245, 158, 11, 0.02));
       border-color: rgba(247, 201, 72, 0.15);
@@ -389,7 +377,6 @@
       margin-bottom: 10px;
     }
 
-    /* ── Rank List ── */
     .rank-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -437,7 +424,6 @@
       font-weight: 800;
     }
 
-    /* ── Winstreak ── */
     .ws-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -475,26 +461,46 @@
       color: #f7c948;
     }
 
-    /* ── Gamepass specific ── */
-    .gp-card .gp-tax {
-      font-size: 0.8rem;
-      color: #8892b0;
-      margin-top: 2px;
+    /* ── Fee Schedule ── */
+    .fee-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-top: 10px;
     }
-    .gp-card .gp-delivery {
-      font-size: 0.8rem;
+    .fee-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 20px;
+      padding: 30px 20px;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .fee-item:hover {
+      background: rgba(247, 201, 72, 0.05);
+      border-color: rgba(247, 201, 72, 0.15);
+      transform: translateY(-4px);
+    }
+    .fee-item .fee-range {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #f7c948;
+    }
+    .fee-item .fee-amount {
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: #f0f4ff;
+      margin: 10px 0 6px;
+    }
+    .fee-item .fee-desc {
+      color: #8892b0;
+      font-size: 0.95rem;
+    }
+    .fee-item .fee-delivery {
       color: #5a8f6c;
       font-weight: 600;
-      margin-top: 4px;
-    }
-    .gp-card .gp-base {
-      font-size: 0.9rem;
-      color: #8892b0;
-      text-decoration: line-through;
-    }
-    .gp-highlight {
-      border-color: rgba(88, 101, 242, 0.3);
-      background: linear-gradient(145deg, rgba(88, 101, 242, 0.05), rgba(88, 101, 242, 0.01));
+      margin-top: 12px;
+      font-size: 0.95rem;
     }
 
     /* ── Subscription Box ── */
@@ -589,7 +595,6 @@
       box-shadow: 0 12px 40px rgba(88, 101, 242, 0.3);
     }
 
-    /* ── Discord CTA ── */
     .discord-cta {
       background: linear-gradient(145deg, rgba(88, 101, 242, 0.08), rgba(88, 101, 242, 0.02));
       border: 1px solid rgba(88, 101, 242, 0.15);
@@ -649,7 +654,6 @@
       background: rgba(247, 201, 72, 0.04);
     }
 
-    /* ── Scroll Animation ── */
     .fade-up {
       opacity: 0;
       transform: translateY(40px);
@@ -660,7 +664,6 @@
       transform: translateY(0);
     }
 
-    /* ── Footer ── */
     footer {
       text-align: center;
       padding: 36px 0 24px;
@@ -674,7 +677,6 @@
       text-decoration: none;
     }
 
-    /* ── Responsive ── */
     @media (max-width: 768px) {
       .hero h1 { font-size: 2.8rem; }
       .section-title { font-size: 2rem; }
@@ -683,6 +685,7 @@
       .card-grid { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
       .rank-grid { grid-template-columns: 1fr; }
       .ws-grid { grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); }
+      .fee-grid { grid-template-columns: 1fr 1fr; }
       .quick-nav .qn-btn {
         padding: 14px 28px;
         font-size: 1rem;
@@ -701,21 +704,19 @@
       .hero h1 { font-size: 2.2rem; }
       .btn-primary, .btn-secondary { padding: 12px 28px; font-size: 0.95rem; }
       .discord-cta .btn-discord { padding: 12px 28px; font-size: 0.95rem; }
+      .fee-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ─── LOADER ─── -->
   <div id="loader-wrapper">
     <div class="loader-icon"><i class="fas fa-trophy"></i></div>
     <div class="loader-text">LOADING</div>
   </div>
 
-  <!-- BG Glow -->
   <div class="bg-glow"></div>
 
-  <!-- ─── HEADER ─── -->
   <header>
     <div class="container nav">
       <div class="logo">
@@ -733,7 +734,6 @@
     </div>
   </header>
 
-  <!-- ─── HERO ─── -->
   <section class="hero container">
     <h1>DOMINATE THE <span>ARENA</span></h1>
     <p>Professional Brawl Stars boosting • Fast • Safe • 100% hand-played</p>
@@ -743,8 +743,6 @@
         <i class="fab fa-discord"></i> Join Discord
       </a>
     </div>
-
-    <!-- 4 BIG CATEGORY BUTTONS (scroll to sections) -->
     <div class="quick-nav">
       <a href="#prestige" class="qn-btn"><i class="fas fa-crown"></i> Prestige</a>
       <a href="#ranks" class="qn-btn"><i class="fas fa-arrow-up"></i> Ranks</a>
@@ -759,7 +757,6 @@
       <h2 class="section-title fade-up">👑 Prestige Boosting</h2>
       <p class="section-sub fade-up">Elite tier boosts with maximum efficiency</p>
       <div class="card-grid">
-        <!-- P1 -->
         <div class="card prestige-card fade-up">
           <span class="badge">POPULAR</span>
           <span class="icon">⭐</span>
@@ -768,7 +765,6 @@
           <div class="sub">Quick & reliable</div>
           <a href="https://discord.gg/h5vKuTFM3w" target="_blank" rel="noopener noreferrer" class="btn-card">Order Now</a>
         </div>
-        <!-- P2 -->
         <div class="card prestige-card fade-up">
           <span class="badge">BEST VALUE</span>
           <span class="icon">🌟</span>
@@ -777,7 +773,6 @@
           <div class="sub">Great balance</div>
           <a href="https://discord.gg/h5vKuTFM3w" target="_blank" rel="noopener noreferrer" class="btn-card">Order Now</a>
         </div>
-        <!-- P3 -->
         <div class="card prestige-card fade-up">
           <span class="badge">PREMIUM</span>
           <span class="icon">👑</span>
@@ -786,7 +781,6 @@
           <div class="sub">High-tier expertise</div>
           <a href="https://discord.gg/h5vKuTFM3w" target="_blank" rel="noopener noreferrer" class="btn-card">Order Now</a>
         </div>
-        <!-- P4 -->
         <div class="card prestige-card fade-up">
           <span class="badge">ULTIMATE</span>
           <span class="icon">🏆</span>
@@ -805,27 +799,21 @@
       <h2 class="section-title fade-up">📈 Rank Progression</h2>
       <p class="section-sub fade-up">Climb from Bronze to Masters — transparent pricing</p>
       <div class="rank-grid">
-        <!-- Bronze -->
         <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🥉</span> Bronze 1 → 2</span><span class="rank-price">$1.00</span></div>
         <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🥉</span> Bronze 2 → 3</span><span class="rank-price">$1.50</span></div>
         <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🥉</span> Bronze 3 → Silver 1</span><span class="rank-price">$2.00</span></div>
-        <!-- Silver -->
         <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🥈</span> Silver 1 → 2</span><span class="rank-price">$2.00</span></div>
         <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🥈</span> Silver 2 → 3</span><span class="rank-price">$2.00</span></div>
         <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🥈</span> Silver 3 → Gold 1</span><span class="rank-price">$2.00</span></div>
-        <!-- Gold -->
         <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🥇</span> Gold 1 → 2</span><span class="rank-price">$2.00</span></div>
         <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🥇</span> Gold 2 → 3</span><span class="rank-price">$2.00</span></div>
         <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🥇</span> Gold 3 → Diamond 1</span><span class="rank-price">$3.00</span></div>
-        <!-- Diamond -->
         <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">💎</span> Diamond 1 → 2</span><span class="rank-price">$3.00</span></div>
         <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">💎</span> Diamond 2 → 3</span><span class="rank-price">$3.00</span></div>
         <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">💎</span> Diamond 3 → Mythic 1</span><span class="rank-price">$4.00</span></div>
-        <!-- Mythic -->
         <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🔮</span> Mythic 1 → 2</span><span class="rank-price">$4.00</span></div>
         <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🔮</span> Mythic 2 → 3</span><span class="rank-price">$4.00</span></div>
         <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">🔮</span> Mythic 3 → Legendary 1</span><span class="rank-price">$10.00</span></div>
-        <!-- Legendary -->
         <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">⚡</span> Legendary 1 → 2</span><span class="rank-price">$12.00</span></div>
         <div class="rank-item fade-up"><span class="rank-name"><span class="rank-icon">⚡</span> Legendary 2 → 3</span><span class="rank-price">$14.00</span></div>
         <div class="rank-item fade-up" style="border-color: rgba(247,201,72,0.2);">
@@ -856,55 +844,30 @@
     </div>
   </section>
 
-  <!-- ─── GAMEPASS ─── -->
+  <!-- ─── GAMEPASS FEE SCHEDULE ─── -->
   <section id="gamepass">
     <div class="container">
-      <h2 class="section-title fade-up">🎮 Gamepass Store</h2>
-      <p class="section-sub fade-up">Exclusive gamepasses with fast delivery. Standard delivery <strong>under 48h</strong>.</p>
+      <h2 class="section-title fade-up">🎮 Gamepass Fees</h2>
+      <p class="section-sub fade-up">Standard fees apply to all gamepass purchases. Delivery always <strong>under 48h</strong>.</p>
 
-      <div class="card-grid">
-        <!-- Gamepass 1: Under $10 -->
-        <div class="card gp-card fade-up">
-          <span class="icon">🎟️</span>
-          <h3>Brawl Pass</h3>
-          <div class="gp-base">Base: $9.99</div>
-          <div class="price">$11.99</div>
-          <div class="gp-tax">+$2 (under $10 tax)</div>
-          <div class="gp-delivery">📦 Delivery under 48h</div>
-          <a href="https://discord.gg/h5vKuTFM3w" target="_blank" rel="noopener noreferrer" class="btn-card">Order Now</a>
+      <div class="fee-grid">
+        <div class="fee-item fade-up">
+          <div class="fee-range">Under $25</div>
+          <div class="fee-amount">+$4</div>
+          <div class="fee-desc">Processing fee</div>
+          <div class="fee-delivery">📦 Delivery under 48h</div>
         </div>
-
-        <!-- Gamepass 2: Under $25 -->
-        <div class="card gp-card fade-up">
-          <span class="icon">👾</span>
-          <h3>Skin Vault</h3>
-          <div class="gp-base">Base: $19.99</div>
-          <div class="price">$23.99</div>
-          <div class="gp-tax">+$4 (under $25 tax)</div>
-          <div class="gp-delivery">📦 Delivery under 48h</div>
-          <a href="https://discord.gg/h5vKuTFM3w" target="_blank" rel="noopener noreferrer" class="btn-card">Order Now</a>
+        <div class="fee-item fade-up">
+          <div class="fee-range">Under $50</div>
+          <div class="fee-amount">+$7</div>
+          <div class="fee-desc">Processing fee</div>
+          <div class="fee-delivery">📦 Delivery under 48h</div>
         </div>
-
-        <!-- Gamepass 3: Under $50 -->
-        <div class="card gp-card fade-up">
-          <span class="icon">📦</span>
-          <h3>Mega Bundle</h3>
-          <div class="gp-base">Base: $39.99</div>
-          <div class="price">$46.99</div>
-          <div class="gp-tax">+$7 (under $50 tax)</div>
-          <div class="gp-delivery">📦 Delivery under 48h</div>
-          <a href="https://discord.gg/h5vKuTFM3w" target="_blank" rel="noopener noreferrer" class="btn-card">Order Now</a>
-        </div>
-
-        <!-- Gamepass 4: Over $50 -->
-        <div class="card gp-card fade-up gp-highlight">
-          <span class="icon">💎</span>
-          <h3>Ultimate Pack</h3>
-          <div class="gp-base">Base: $69.99</div>
-          <div class="price">$79.99</div>
-          <div class="gp-tax">+$10 (over $50 tax)</div>
-          <div class="gp-delivery">📦 Delivery under 48h</div>
-          <a href="https://discord.gg/h5vKuTFM3w" target="_blank" rel="noopener noreferrer" class="btn-card">Order Now</a>
+        <div class="fee-item fade-up">
+          <div class="fee-range">Over $50</div>
+          <div class="fee-amount">+$10</div>
+          <div class="fee-desc">Processing fee</div>
+          <div class="fee-delivery">📦 Delivery under 48h</div>
         </div>
       </div>
 
@@ -956,7 +919,6 @@
     </div>
   </section>
 
-  <!-- ─── FOOTER ─── -->
   <footer>
     <div class="container">
       <p>© 2026 <strong>BrawlBoost</strong> — Not affiliated with Supercell. All boosts are hand-played.</p>
@@ -970,9 +932,7 @@
     </div>
   </footer>
 
-  <!-- ─── SCRIPTS ─── -->
   <script>
-    // Hide loader on page load
     window.addEventListener('load', function() {
       const loader = document.getElementById('loader-wrapper');
       loader.classList.add('hidden');
@@ -981,7 +941,6 @@
       }, 800);
     });
 
-    // Scroll Animation (fade-up)
     document.addEventListener('DOMContentLoaded', () => {
       const elements = document.querySelectorAll('.fade-up');
       const observer = new IntersectionObserver((entries) => {
